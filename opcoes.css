@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+body {
+    background-color: white;
+    height: 100%; 
+    overflow-x: hidden ;
+    overflow-y: hidden;
+}
+
+/*NAVBAR*/
+
+nav {
+    background-color: #21203f;
+    text-align: center;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+nav ul li {
+    font-size: 15px;
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff1ce;
+}
+
+.sub-menu-contatos {
+    display: none;
+}
+
+nav ul li:hover .sub-menu-contatos {
+    display: block;
+    position: absolute;
+    background-color: #21203f;
+    margin-top: 15px;
+    margin-left: -38px;
+
+}
+
+nav ul li:hover .sub-menu-contatos ul {
+    display: block;
+}
+
+nav ul li:hover .sub-menu-contatos ul li {
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+nav ul li:hover .sub-menu-contatos ul li:hover {
+    background-color: #4b3c5d;
+}
+
+/*NAVBAR FIM*/
+
+h1{
+    margin: 20px 10px;
+    height: 550px;
+    width: 500px;
+}
+
+img{
+    position: absolute;
+    height: 520px;
+    width: 400px;
+    right: 750px;
+ 
+}
+
+ul{
+    text-decoration: none;
+}
+
+li{
+color: white;
+position: relative;
+display:inline-block ;
+color: black;
+font-size: 30px;
+font-family: "montserrat";
+text-decoration: none;
+margin: 20px 0;
+border: 2px solid plum;
+border-radius: 30px;
+padding: 14px 60px;
+text-transform: uppercase;
+overflow: hidden;
+transition: 1s all ease;
+}
+
+li::before{
+    background: plum;
+    color: white;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+
+ li::before{
+    color: white;
+    width: 100%;
+    height: 0%;
+  }
+li:hover::before{
+    height: 100%;
+    color: white;
+}
+
+li a{
+    text-decoration: none;
+}
+
+.opcoes{
+    color: rgb(248, 248, 248);
+    position: absolute;
+    right: 300px;
+    margin-top: -38%;
+}
+
+.face{
+    position: absolute;
+    margin-top: -40px;
+}
+
+.subtitulo{
+    color: red;
+    margin-top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: normal;
+    font-size: 45px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.tipos{
+    color: #bf40bf;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    text-transform: uppercase;
+    text-align: right;
+    font-style: normal;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+

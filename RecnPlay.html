@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac</title>
+    <link rel="stylesheet" href="rec.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="rest.html">Início</a> </li>
+                <li> <a href="sobre.html">Sobre</a> </li>
+                <li> <a href="http://127.0.0.1:5500/recnplay/devpage.html">Contatos</a> 
+                
+                    <div class="sub-menu-contatos">
+                        <ul>
+                            <li> <a href="estetic.html">Turma de Estética</a> </li>
+                            <li> <a href="http://127.0.0.1:5500/recnplay/devpage.html">Desenvolvedores</a> </li>
+                        </ul>
+                    </div>
+                
+                </li>
+            </ul>
+        </nav>
+        <!-- NAVBAR FIM -->
+    </header>
+    <main>
+        <h2 style="text-align:center;">CLIQUE NO AVATAR ABAIXO PARA COMEÇAR!</h2>
+            <a href="http://127.0.0.1:5500/recnplay/opcoes.html"><div class="manequim" style="text-align:center"><img src="https://static.sizebay.technology/assets/shapes/v4/new/0/M/toggle-off/B/030303.jpg" alt=""></div></a>
+    </main>
+    
+        
+    
+</body>
+<script>
+var a = document.getElementById('Devs')
+        a.addEventListener ('click', clicar)
+        a.addEventListener ('mouseenter', entrou )
+        a.addEventListener ('mouseout', saiu)
+        
+        function clicar (){
+            window.location.href = "http://127.0.0.1:5500/recnplay/devpage.html"
+        }
+        
+        function entrou (){
+            a.style.backgroundColor = '#bf40bf'
+        }
+        
+        function saiu (){
+            a.style.backgroundColor = 'black'
+            }
+
+     var b = document.getElementById('wpp')
+            b.addEventListener ('click', clicar2)
+        
+        function clicar2 (){
+            window.location.href = "https://chat.whatsapp.com/ElbZpapd2KO4WoiiLKMFAn"
+        }
+
+var c = document.getElementsByClassName ('manequim')   
+        c.addEventListener ('click', clicar3 )  
+            function clicar3 (){
+                window.location.href = "http://127.0.0.1:5500/recnplay/opcoes.html"
+            } 
+</script>
+</html>
