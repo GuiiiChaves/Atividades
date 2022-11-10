@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FACE</title>
-    <link rel="stylesheet" href="opcoes.css">
+    <link rel="stylesheet" href="face.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li> <a href="rest.html">Início</a> </li>
+                <li> <a href="homepage.html">Início</a> </li>
                 <li> <a href="sobre.html">Sobre</a> </li>
-                <li> <a href="http://127.0.0.1:5500/recnplay/devpage.html">Contatos</a> 
+                <li> <a href="dev.html">Contatos</a> 
                 
                     <div class="sub-menu-contatos">
                         <ul>
                             <li> <a href="estetic.html">Turma de Estética</a> </li>
-                            <li> <a href="http://127.0.0.1:5500/recnplay/devpage.html">Desenvolvedores</a> </li>
+                            <li> <a href="dev.html">Desenvolvedores</a> </li>
                         </ul>
                     </div>
                 
@@ -28,20 +31,65 @@
     </header>
     <main>
         <h2 class="subtitulo">face</h2>
-        <img class="face" src="face.jpg" alt="">
+        <img class="face" src="img/Manequim.png" alt=""></a>
         <div class="tipos">
-            <p>Rugas
+            <p class="rugas">Rugas
             </p>
-            <p>Olheiras
+            <p class="olheiras">Olheiras
             </p>
-            <p>Acne</p>
-            <p>Oleosidade</p>
-            <p>Melasma</p>
-            <p>Flacidez</p>
-            <p>Dermatite</p>
-            <p>Foliculite</p>
+            <p class="acne">Acne</p>
+            <p class="oleosidade">Oleosidade</p>
+            <p class="melasma">Melasma</p>
+            <p class="flacidez">Flacidez</p>
+            <p class="dermatite">Dermatite</p>
+            <p class="foliculite">Foliculite</p>
         </div>
     </main>
+    <div id="modal-promocao" class="modal-container">
+        <div class="modal">
+            <button class="fechar">x</button>
+            <h3 class="modal-foliculite">Foliculite</h3>
+            <p><strong>Esfoliar periodicamente a pele, Evitar agressoes na pele, Hidratar a pele e usar Protetor solar.</p>
+
+        </div>
+    </div>
+    <div id="modal-promocaoACNE" class="modal-containerACNE">
+        <div class="modalACNE">
+            <button class="fechar">x</button>
+            <h4 class="modal-acne">ACNE</h4>
+            <p><strong>Higienizar a pele regularmente, Nao espremer os cravos, Nao dormir com maquiagem e Evitar alimentos ricos em gordura.</p>
+
+        </div>
+    </div>
+
+    <script>
+       function iniciaModal(modalID) {
+			if(localStorage.fechaModal !== modalID) {
+				const modal = document.getElementById(modalID);
+				if(modal) {
+					modal.classList.add('mostrar');
+					modal.addEventListener('click', (e) => {
+						if(e.target.id == modalID || e.target.className == 'fechar') {
+							modal.classList.remove('mostrar');
+							localStorage.fechaModal = modalID;
+						}
+					});
+				}
+			}
+		}
+        
+        const foliculite = document.querySelector('.foliculite');
+        foliculite.addEventListener('click', function (){
+            iniciaModal('modal-promocao');
+        });
+        function iniciaModal(modalID){
+            const modalACNE = document.getElementById(modalID);
+            modalACNE.classList.add('mostrar');}
+            const acne = document.querySelector('.acne');
+        acne.addEventListener('click', function (){
+            iniciaModal('modal-promocaoACNE');
+            });
+    </script>
 
     
 </body>
